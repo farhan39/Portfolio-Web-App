@@ -1,0 +1,78 @@
+# Node.js & React-related ignores
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.cache/
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+.log/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Dependencies & package management
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Virtual Environment (venv)
+venv/
+venv.bak/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS/System files
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+*.swn
+*.bak
+*.sublime-project
+*.sublime-workspace
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# TypeScript build files
+*.tsbuildinfo
+
+# Storybook
+.storybook/
+out/
+storybook-static/
+
+# Testing
+jest.config.js
+cypress/
+cypress.json
+cypress.env.json
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Next.js specific (if using Next.js)
+.next/
+out/
