@@ -11,7 +11,6 @@ function AboutSection({ profilePicture, skills, interests, description }) {
         <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
         
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-          {/* Profile Picture */}
           <div className="w-full md:w-1/3 flex justify-center">
             <img 
               src={profilePicture || 'https://via.placeholder.com/300'} 
@@ -19,19 +18,17 @@ function AboutSection({ profilePicture, skills, interests, description }) {
               className="rounded-full w-64 h-64 object-cover shadow-lg"
             />
           </div>
-          
-          {/* About Content */}
+        
           <div className="w-full md:w-2/3">
             <p className="text-lg mb-6">{description}</p>
             
-            {/* Skills */}
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-3">My Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsList.map((skill, index) => (
                   <span 
                     key={index} 
-                    className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm"
+                    className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -39,7 +36,6 @@ function AboutSection({ profilePicture, skills, interests, description }) {
               </div>
             </div>
             
-            {/* Interests */}
             <div>
               <h3 className="text-xl font-semibold mb-3">My Interests</h3>
               <div className="flex flex-wrap gap-2">

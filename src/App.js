@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-// Components
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -11,7 +10,6 @@ import Footer from './components/Footer';
 import DarkModeToggle from './components/DarkModeToggle';
 import DataEntryPage from './components/DataEntryPage';
 
-// Styles
 import './App.css';
 
 function App() {
@@ -32,20 +30,19 @@ function App() {
     }
   }, [isDarkMode]);
   
-  // Handle form submission from DataEntryPage
   const handleDataSubmit = (data) => {
     setPortfolioData(data);
     // Store data in localStorage to persist between page refreshes
-    localStorage.setItem('portfolioData', JSON.stringify(data));
+    // localStorage.setItem('portfolioData', JSON.stringify(data));
   };
   
   // Load saved data on initial render
-  useEffect(() => {
-    const savedData = localStorage.getItem('portfolioData');
-    if (savedData) {
-      setPortfolioData(JSON.parse(savedData));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedData = localStorage.getItem('portfolioData');
+  //   if (savedData) {
+  //     setPortfolioData(JSON.parse(savedData));
+  //   }
+  // }, []);
   
   // Portfolio view component
   const PortfolioView = () => {

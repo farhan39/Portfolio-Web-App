@@ -20,26 +20,19 @@ function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to your backend
-    // For this example, we'll simulate a successful submission
     
-    // Simulate form submission
     setTimeout(() => {
-      // Simulated successful submission
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       
-      // Reset submission status after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
     }, 1000);
   };
 
-  // Display success message using useEffect
   useEffect(() => {
     if (isSubmitted) {
-      // You could perform additional actions here when the form is successfully submitted
       console.log('Form successfully submitted!');
     }
   }, [isSubmitted]);
@@ -71,7 +64,7 @@ function ContactSection() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 required
               />
             </div>
@@ -84,7 +77,7 @@ function ContactSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 required
               />
             </div>
@@ -97,14 +90,14 @@ function ContactSection() {
                 value={formData.message}
                 onChange={handleChange}
                 rows="5"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 required
               />
             </div>
             
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="w-full bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
             >
               Send Message
             </button>

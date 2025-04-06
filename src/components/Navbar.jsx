@@ -13,7 +13,6 @@ function Navbar() {
         <div className="flex justify-between items-center py-4">
           <div className="text-xl font-bold">Portfolio</div>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <a href="#home" className="hover:text-gray-300">Home</a>
             <a href="#about" className="hover:text-gray-300">About</a>
@@ -21,7 +20,6 @@ function Navbar() {
             <a href="#contact" className="hover:text-gray-300">Contact</a>
           </div>
           
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button 
               onClick={toggleMenu}
@@ -54,7 +52,6 @@ function Navbar() {
           </div>
         </div>
         
-        {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden py-4 space-y-4">
             <a href="#home" className="block hover:text-gray-300" onClick={toggleMenu}>Home</a>

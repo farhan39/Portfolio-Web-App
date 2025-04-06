@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function DataEntryPage({ onSubmit }) {
+
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         shortBio: '',
@@ -65,13 +69,13 @@ function DataEntryPage({ onSubmit }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(formData);
+        navigate('/portfolio');
     };
 
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-2xl font-bold mb-4">Portfolio Data Entry</h1>
             <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Basic Info */}
                 <div className="bg-gray-100 p-4 rounded-lg">
                     <h2 className="text-xl font-semibold mb-2">Basic Information</h2>
                     <div className="grid grid-cols-1 gap-4">
@@ -99,7 +103,6 @@ function DataEntryPage({ onSubmit }) {
                     </div>
                 </div>
 
-                {/* About Me Section */}
                 <div className="bg-gray-100 p-4 rounded-lg">
                     <h2 className="text-xl font-semibold mb-2">About Me</h2>
                     <div className="grid grid-cols-1 gap-4">
@@ -146,11 +149,9 @@ function DataEntryPage({ onSubmit }) {
                     </div>
                 </div>
 
-                {/* Projects Section */}
                 <div className="bg-gray-100 p-4 rounded-lg">
                     <h2 className="text-xl font-semibold mb-2">Projects</h2>
 
-                    {/* Added projects list */}
                     {formData.projects.length > 0 && (
                         <div className="mb-4">
                             <h3 className="text-lg font-medium mb-2">Added Projects:</h3>
@@ -162,7 +163,6 @@ function DataEntryPage({ onSubmit }) {
                         </div>
                     )}
 
-                    {/* Add new project form */}
                     <div className="grid grid-cols-1 gap-4 border p-4 rounded-lg">
                         <div>
                             <label className="block mb-1">Project Title</label>
@@ -203,18 +203,16 @@ function DataEntryPage({ onSubmit }) {
                         <button
                             type="button"
                             onClick={addProject}
-                            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+                            className="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600"
                         >
                             Add Project
                         </button>
                     </div>
                 </div>
 
-                {/* Social Media Section */}
                 <div className="bg-gray-100 p-4 rounded-lg">
                     <h2 className="text-xl font-semibold mb-2">Social Media</h2>
 
-                    {/* Added social media list */}
                     {formData.socialMedia.length > 0 && (
                         <div className="mb-4">
                             <h3 className="text-lg font-medium mb-2">Added Social Media:</h3>
@@ -226,7 +224,6 @@ function DataEntryPage({ onSubmit }) {
                         </div>
                     )}
 
-                    {/* Add new social media form */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border p-4 rounded-lg">
                         <div>
                             <label className="block mb-1">Platform Name</label>
@@ -249,14 +246,13 @@ function DataEntryPage({ onSubmit }) {
                         <button
                             type="button"
                             onClick={addSocialMedia}
-                            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 md:col-span-2"
+                            className="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 md:col-span-2"
                         >
                             Add Social Media
                         </button>
                     </div>
                 </div>
 
-                {/* Submit Button */}
                 <button
                     type="submit"
                     className="bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600"
